@@ -27,3 +27,7 @@ steps:
     pathtoPublish: '$(Build.SourcesDirectory)/terraform.tfplan'
     artifactName: 'terraformPlan'
     publishLocation: 'Container'
+- task: TerraformTaskV4@4
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
